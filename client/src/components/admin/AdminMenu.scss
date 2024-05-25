@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    padding: 20px;
+.sidebar {
+    flex-direction: row;
+    width: 20%;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+
+    .nav-list {
+        list-style-type: none;
+        padding: 0;
+        li{
+            margin-bottom: 13px;
+            .item{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+}
+
+.content {
+   
+    flex: 1;
+    padding: 20px;
+    .detail {
+        background: #f4f4f4;
+        padding: 20px;
+    }
+}
+
+
+}

@@ -1,0 +1,134 @@
+@import "../../css-config/mixins.scss";
+
+.main-header{
+  width: 100%;
+  padding: 0 20px;
+  background-color: #212121;
+  color:white;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  // z-index: 99;
+  @include md{
+    padding: 0 40px;
+  }
+    .header-content{
+      display: flex;
+      height: 55px;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+     
+    .left{
+       display: none;
+       
+       gap:20px;
+       list-style-type: none;
+       @include  md{
+        display: flex;
+      }
+      .li{
+         
+         text-transform: uppercase;
+         cursor: pointer;
+         font-size: 14px;
+         font-weight: 600;
+         text-decoration: none;
+         color:white;
+        }
+     }
+    .center{
+        font-size: 22px;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        color:white;
+        @include md{
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+      }
+    .right{
+       display:flex;
+       gap: 20px;
+       @include md{
+        gap:20px;
+       }
+       
+     svg{
+        font-size: 20px;
+        cursor: pointer;
+        @include md{
+            font-size: 24px;
+        }
+        }
+
+     .cart-icon{
+        position: relative;
+        span{
+            min-width: 20px;
+            text-align: center;
+            background-color: #Be2de2;
+            position:absolute;
+            padding: 1px;
+           top: -7px;
+           right: -10px;
+           font-size: 12px;
+          line-height: 1;
+          border-radius: 10px;
+        }
+     }   
+
+     .log {
+      min-width: 50px;
+      min-height: 30px;
+      color: rgb(104, 85, 224);
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(104, 85, 224, 1);
+      display: none;
+      
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      padding: 1px;
+
+      @include  md{
+       display: flex;
+    }
+  }
+    .reg {
+      min-width: 50px;
+      min-height: 30px;
+      color: white;
+      background-color: rgba(104, 85, 224, 1);
+      border-radius: 15px;
+      padding: 1px;
+      
+
+    }
+    button:hover {
+      color: white;
+      
+      box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+      background-color: rgba(104, 85, 224, 1);
+    }
+        }
+
+    }
+
+    &.stickey-header{
+ position:sticky;
+ top:0px;
+ animation:slide-bottom 0.3s ease forwards; 
+    }
+ @keyframes slide-bottom{
+    0% { transform: translateY(-80px);}
+    100% { transform: translateY(0);}
+ }
+
+ 
+
+  
+  
+}
